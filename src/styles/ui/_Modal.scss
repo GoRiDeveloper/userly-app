@@ -1,0 +1,7 @@
+@use "../abstracts/mixins" as m;
+
+.modal {
+
+    @include m.modal(var(--modal-bg));
+
+}

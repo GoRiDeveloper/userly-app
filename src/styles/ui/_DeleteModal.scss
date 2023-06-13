@@ -1,0 +1,68 @@
+@use "../abstracts/mixins" as m;
+
+.deleteModal {
+
+    position: relative;
+    margin: 0 1rem;
+    padding: 2rem;
+    max-width: 22rem;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    background-color: var(--white);
+    transform: translateY(-100%);
+    transition: transform .5s ease;
+    visibility: hidden;
+
+    &--active {
+    
+        visibility: visible;
+        transform: translateY(0);
+
+    }
+
+    &__heading {
+
+        font-size: 2rem;
+        font-weight: 700;
+
+    }
+
+    &__text {
+
+        &--name {
+
+            font-weight: 700;
+
+        }
+
+    }
+
+    &__buttons {
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include m.telephone {
+
+            flex-direction: row;
+
+        }
+
+    }
+
+    &__button {
+
+        @include m.btn(var(--main-color), var(--white), 100%);
+
+        &--delete {
+
+            @include m.btn(var(--secondary-color), var(--white), 100%);
+
+        }
+
+    }
+
+}

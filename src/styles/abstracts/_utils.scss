@@ -1,0 +1,22 @@
+.theme {
+
+    --main-color: #555A88;
+    --secondary-color: #D85D5D;
+    --secondary-border-color: #D93F3F;
+    --tertiary-color: #F7F7F7;
+    --tertiary-color-light: #F9FAFC;
+    --tertiary-color-light-2: #e5e5e5;
+    --tertiary-border-color: #BDBDBD;
+
+    --white: #fff;
+    --black: #000;
+    --green: #61d461;
+
+    &--dark {
+
+        --black: #000;
+        --white: #fff;
+
+    }
+
+}

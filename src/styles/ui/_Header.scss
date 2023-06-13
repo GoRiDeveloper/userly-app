@@ -1,0 +1,45 @@
+@use "../abstracts/mixins" as m;
+
+.header {
+
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 1rem;
+
+    @include m.telephone {
+
+        margin: 1.5rem 2.5rem;
+        flex-direction: row;
+        row-gap: 0;
+
+    }
+
+    &__heading {
+
+        font-size: 1.563rem;
+        font-weight: 700;
+
+        @include m.tablet {
+
+            font-size: 3.125rem;
+
+        }
+
+    }
+
+    &__addBtn {
+
+        @include m.btn(var(--main-color), var(--white), 14.188rem);
+
+    }
+
+    &__plusIcon {
+
+        width: 10%;
+
+    }
+
+}

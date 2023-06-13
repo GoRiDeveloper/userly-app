@@ -1,0 +1,82 @@
+@use "./variables" as v;
+
+@mixin telephone {
+    @media (width > v.$telephone-bp) {
+        @content;
+    };
+};
+
+@mixin tablet {
+    @media (width > v.$tablet-bp) {
+        @content;
+    };
+};
+
+@mixin desktop {
+    @media (width > v.$desktop-bp) {
+        @content;
+    };
+};
+
+@mixin modal ($bgColor) {
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $bgColor;
+    transition: all .5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+
+    &--active {
+
+        opacity: 1;
+        visibility: visible;
+
+    }
+
+}
+
+@mixin btn ($bgColor, $fontColor, $width) {
+
+    padding: .5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $width;
+    background-color: $bgColor;
+    color: $fontColor;
+    transition: transform .2s ease-in;
+    cursor: pointer;
+
+    &:hover {
+
+        transform: scale(1.02);
+
+    }
+
+};
+
+@mixin pulse {
+
+    @keyframes pulse {
+
+        from {
+
+            transform: scale(1);
+
+        }
+
+        to {
+
+            transform: scale(1.1);
+
+        }
+
+    };
+    
+};

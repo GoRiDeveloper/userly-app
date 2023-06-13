@@ -1,0 +1,115 @@
+.user {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+    border: 1px solid var(--tertiary-color-light-2);
+
+    &__heading {
+
+        padding: 1.5rem 1.5rem 0;
+        font-size: 1.563rem;
+        text-align: center;
+
+    }
+
+    &__line {
+
+        width: 90%;
+        border: 1px solid var(--tertiary-color-light-2);
+
+    }
+
+    &__info {
+
+        padding-left: 1rem;
+        align-self: flex-start;
+
+    }
+
+    &__subtitle {
+
+        color: #d3d3d3;
+
+    }
+
+    &__box {
+
+        display: flex;
+
+    }
+
+    &__iconGift {
+
+        width: 1.3rem;
+        margin-right: .5rem;
+
+    }
+
+    &__image {
+
+        padding: 0 .5rem;
+        height: 8.25rem;
+
+    }
+
+    &__buttons {
+
+        margin: 0 1.5rem 1.5rem;
+        display: flex;
+        align-self: flex-end;
+
+    }
+
+    &__button {
+
+        margin-left: .5rem;
+        width: 2.688rem;
+        height: 2.688rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--secondary-color);
+        border: 1px solid var(--secondary-border-color);
+        border-radius: .25rem;
+        transition: transform .1s ease-in-out;
+        cursor: pointer;
+
+        &--edit {
+
+            background-color: #f7f7f7;
+            border: 1px solid var(--tertiary-border-color);
+
+        }
+
+        &:hover {
+
+            transform: scale(1.02);
+
+            & > .user__icon {
+
+                fill: var(--tertiary-border-color);
+
+            }
+
+        }
+
+    }
+
+    &__icon {
+
+        width: 75%;
+        fill: #fff;
+        transition: fill .1s ease-in-out;
+
+        &--edit {
+
+            width: 85%;
+            fill: #d3d3d3;
+
+        }
+
+    }
+
+}

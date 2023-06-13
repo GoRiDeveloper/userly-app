@@ -1,0 +1,77 @@
+@use "../abstracts/mixins" as m;
+
+.infoContainer {
+
+    position: relative;
+    margin: 0 1rem;
+    padding: 2rem;
+    max-width: 22rem;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+    background-color: var(--white);
+    transition: transform .5s ease;
+
+    &--active {
+
+        transform: translateY(0);
+        visibility: visible;
+
+    }
+
+    &__icon {
+
+        width: 8rem;
+        animation: pulse .5s infinite linear alternate;
+
+        &--check {
+
+            fill: var(--green);
+
+        }
+
+        &--error {
+
+            fill: var(--secondary-color);
+
+        }
+
+        @include m.pulse();
+
+    }
+
+    &__heading {
+
+        font-size: 2rem;
+        font-weight: 900;
+        text-align: center;
+
+        &--check {
+
+            color: var(--green);
+
+        }
+
+        &--error {
+
+            color: var(--secondary-color);
+
+        }
+
+    }
+
+    &__message {
+
+        text-align: center;
+
+    }
+
+    &__btn {
+
+        @include m.btn(var(--main-color), var(--white), 50%);
+
+    }
+
+}
