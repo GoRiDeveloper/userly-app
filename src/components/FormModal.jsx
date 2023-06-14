@@ -18,7 +18,7 @@ const VALIDATION_OPTIONS = {
         minLength: 2,
         pattern: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-zÁÉÍÓÚáéíóú]{2,}$/
     },
-    pass: {
+    password: {
         maxLength: 30,
         minLength: 1,
         pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{10,}$/
@@ -58,7 +58,7 @@ export const FormModal = ({ isUserToUpdate, isShowModal, resetFormModal, createU
             case "minLength":
                 message = `El campo debe ser de mínimo ${VALIDATION_OPTIONS[ref.id][type]} carácteres.`;
             break;
-        
+                  
             case "maxLength":
                 message = `El campo debe de ser de máximo ${VALIDATION_OPTIONS[ref.id][type]} carácteres.`;
             break;
