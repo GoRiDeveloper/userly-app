@@ -78,7 +78,7 @@ export const App = () => {
     const updateUser = async (putData, reset) => {
 
         const patchEndpoint = `${ENDPOINT}/${isUserToUpdate.id}`;
-        const url = `${BASE_URL}${patchEndpoint}`;
+        const url = `${BASE_URL}${patchEndpoint}/`;
 
         try {
 
@@ -98,7 +98,7 @@ export const App = () => {
     const deleteUser = async (id) => {
 
         const delEndpoint = `${ENDPOINT}/${id}`;
-        const url = `${BASE_URL}${delEndpoint}`;
+        const url = `${BASE_URL}${delEndpoint}/`;
 
         try {
 
